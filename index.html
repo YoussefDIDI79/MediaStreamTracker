@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxMedia - Digital Experiences That Inspire</title>
+    <meta name="description" content="BoxMedia creates exceptional digital experiences through innovative web development, UI/UX design, and digital marketing strategies that elevate your brand and drive growth.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2 class="loading-title gradient-text">BoxMedia</h2>
+            <p class="loading-subtitle">Crafting Digital Excellence</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-inner">
+                        <div class="logo-circle">
+                            <span>BM</span>
+                        </div>
+                    </div>
+                    <div class="logo-dot"></div>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name gradient-text logo-shine">BoxMedia</span>
+                    <span class="logo-subtitle">Digital Agency</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="theme-toggle">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb">
+                            <i class="fas fa-sun theme-icon"></i>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <button id="mobile-menu-close" class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mobile-nav-links">
+                <a href="#hero" class="mobile-nav-link">Home</a>
+                <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+                <a href="#services" class="mobile-nav-link">Services</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#team" class="mobile-nav-link">Team</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-line">We Craft</span>
+                <span class="hero-title-line gradient-text typing-text" id="typewriter">
+                    Digital Experiences<span class="cursor">|</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                Innovative web solutions, stunning designs, and digital marketing strategies that elevate your brand
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('portfolio')">
+                    Explore Our Work
+                </button>
+                <button class="btn btn-secondary">
+                    Get Started
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToSection('portfolio')">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Our <span class="gradient-text">Portfolio</span>
+                </h2>
+                <p class="section-subtitle">
+                    Discover our latest projects and creative solutions that drive results
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Our <span class="gradient-text">Services</span>
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive digital solutions to elevate your brand and drive growth
+                </p>
+            </div>
+
+            <div class="services-grid" id="services-grid">
+                <!-- Services will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Our <span class="gradient-text">Expertise</span>
+                </h2>
+                <p class="section-subtitle">
+                    Technical skills and tools we master to deliver exceptional results
+                </p>
+            </div>
+
+            <div class="skills-grid" id="skills-grid">
+                <!-- Skills will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Meet Our <span class="gradient-text">Team</span>
+                </h2>
+                <p class="section-subtitle">
+                    Creative professionals passionate about delivering exceptional digital experiences
+                </p>
+            </div>
+
+            <div class="team-grid" id="team-grid">
+                <!-- Team members will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Member Modal -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Modal content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Client <span class="gradient-text">Testimonials</span>
+                </h2>
+                <p class="section-subtitle">
+                    What our clients say about working with BoxMedia
+                </p>
+            </div>
+
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide" id="testimonial-slide">
+                    <!-- Current testimonial will be displayed here -->
+                </div>
+                
+                <!-- Navigation -->
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn prev" id="testimonial-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+                    <button class="testimonial-btn next" id="testimonial-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Get In <span class="gradient-text">Touch</span>
+                </h2>
+                <p class="section-subtitle">
+                    Ready to start your next project? Let's create something amazing together.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Send us a message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@boxmedia.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Wave Divider -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,120 L1200,120 L1200,60 Q600,0 0,60 Z"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <!-- Logo -->
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <div class="logo-inner">
+                                <div class="logo-circle">
+                                    <span>BM</span>
+                                </div>
+                            </div>
+                            <div class="logo-dot"></div>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name gradient-text logo-shine">BoxMedia</span>
+                            <span class="logo-subtitle">Digital Agency</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional digital experiences that inspire and engage audiences worldwide.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Brand Identity</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest projects and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoxMedia. All rights reserved. Crafted with ❤️ for digital excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <div class="toast-text">
+                <div class="toast-title"></div>
+                <div class="toast-description"></div>
+            </div>
+            <button class="toast-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
