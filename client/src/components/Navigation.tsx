@@ -77,7 +77,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`transition-colors duration-300 ${
+                className={`transition-colors duration-300 text-white ${
                   activeSection === item.id
                     ? "text-[#00DDEB]"
                     : "hover:text-[#00DDEB]"
@@ -143,7 +143,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block text-lg hover:text-[#00DDEB] transition-colors duration-300"
+                  className="block text-lg text-white hover:text-[#00DDEB] transition-colors duration-300"
                 >
                   {item.label}
                 </button>
