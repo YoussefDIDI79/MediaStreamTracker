@@ -458,7 +458,7 @@ body {
   text-align: center;
   color: white;
   z-index: 10;
-  max-width: 4rem;
+  max-width: 48rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -922,7 +922,7 @@ section {
 }
 
 .testimonials-carousel {
-  max-width: 4rem;
+  max-width: 48rem;
   margin: 0 auto;
   position: relative;
 }
@@ -1023,7 +1023,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  max-width: 6rem;
+  max-width: 64rem;
   margin: 0 auto;
 }
 
