@@ -63,12 +63,24 @@ export default function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-[#00DDEB] to-[#8B5CF6] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">BM</span>
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#00DDEB] via-[#4F46E5] to-[#8B5CF6] rounded-xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
+                <div className="w-8 h-8 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">BM</span>
+                </div>
+              </div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-[#FFD93D] to-[#FF6B6B] rounded-full animate-pulse"></div>
             </div>
-            <span className="text-xl font-bold">BoxMedia</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold bg-gradient-to-r from-[#00DDEB] via-[#4F46E5] to-[#8B5CF6] bg-clip-text text-transparent logo-shine">
+                BoxMedia
+              </span>
+              <span className="text-xs text-gray-400 font-medium tracking-wide">
+                Digital Agency
+              </span>
+            </div>
           </motion.div>
 
           {/* Desktop Menu */}
