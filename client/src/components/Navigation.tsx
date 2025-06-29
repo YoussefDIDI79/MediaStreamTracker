@@ -89,10 +89,12 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`transition-colors duration-300 text-white ${
+                className={`transition-colors duration-300 font-medium ${
                   activeSection === item.id
-                    ? "text-[#00DDEB]"
-                    : "hover:text-[#00DDEB]"
+                    ? "text-[#00DDEB] font-semibold"
+                    : isScrolled 
+                      ? "text-foreground hover:text-[#00DDEB]"
+                      : "text-white hover:text-[#00DDEB]"
                 }`}
               >
                 {item.label}
@@ -155,7 +157,11 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block text-lg text-white hover:text-[#00DDEB] transition-colors duration-300"
+                  className={`block text-lg font-medium transition-colors duration-300 ${
+                    activeSection === item.id
+                      ? "text-[#00DDEB] font-semibold"
+                      : "text-foreground hover:text-[#00DDEB]"
+                  }`}
                 >
                   {item.label}
                 </button>
